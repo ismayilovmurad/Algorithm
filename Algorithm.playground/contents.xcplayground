@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
+    <pages>
+        <page name='left to right, right to left'/>
+        <page name='(i-1) + i + (i+1)'/>
+        <page name='zigzag'/>
+        <page name='cut the longest palindrome'/>
+        <page name='one from front, one from back'/>
+    </pages>
+</playground>
