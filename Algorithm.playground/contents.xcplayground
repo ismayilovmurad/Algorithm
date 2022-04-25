@@ -6,5 +6,7 @@
         <page name='zigzag'/>
         <page name='cut the longest palindrome'/>
         <page name='one from front, one from back'/>
+        <page name='digits, most number of times'/>
+        <page name='contiguous subarrays'/>
     </pages>
 </playground>
