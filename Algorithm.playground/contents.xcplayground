@@ -8,5 +8,9 @@
         <page name='one from front, one from back'/>
         <page name='digits, most number of times'/>
         <page name='contiguous subarrays'/>
+        <page name='sum of two divisible by k'/>
+        <page name='one letter from each one'/>
+        <page name='decreasing contiguous subarrays'/>
+        <page name='difference between two arrays'/>
     </pages>
 </playground>
