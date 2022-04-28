@@ -13,5 +13,6 @@
         <page name='decreasing contiguous subarrays'/>
         <page name='difference between two arrays'/>
         <page name='contiguous k length subarrays'/>
+        <page name='is power of two'/>
     </pages>
 </playground>
