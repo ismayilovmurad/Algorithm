@@ -15,7 +15,7 @@ func solution(n: Int, a: [Int]) -> [Int] {
     if n == 1 {
         result.append(a[0])
     }else {
-        for i in 0...n-1 {
+        for i in 0..<n {
             if i == 0 {
                 result.append(0 + a[i] + a[i+1])
             }else if i == n-1 {

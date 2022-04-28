@@ -12,5 +12,6 @@
         <page name='one letter from each one'/>
         <page name='decreasing contiguous subarrays'/>
         <page name='difference between two arrays'/>
+        <page name='contiguous k length subarrays'/>
     </pages>
 </playground>

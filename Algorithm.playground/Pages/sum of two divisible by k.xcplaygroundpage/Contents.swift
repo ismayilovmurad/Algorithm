@@ -21,7 +21,7 @@ func solution(a: [Int], k: Int) -> Int64 {
     
     if k == 1 {
         for i in 0..<a.count-1 {
-            for j in i+1..<a.count {
+            for _ in i+1..<a.count {
                 counter += 1
             }
         }
