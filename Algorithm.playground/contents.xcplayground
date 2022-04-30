@@ -16,5 +16,6 @@
         <page name='is power of two'/>
         <page name='split into two unique'/>
         <page name='super tower'/>
+        <page name='left and right'/>
     </pages>
 </playground>
