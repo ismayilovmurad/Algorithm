@@ -15,7 +15,12 @@
         <page name='contiguous k length subarrays'/>
         <page name='is power of two'/>
         <page name='split into two unique'/>
-        <page name='super tower (incompleted)'/>
+        <page name='super tower'/>
         <page name='left and right'/>
+        <page name='arrange and equal'/>
+        <page name='unusual features for strings (incompleted)'/>
+        <page name='three non-empty (incompleted)'/>
+        <page name='Useful'/>
+        <page name='swap for increasing'/>
     </pages>
 </playground>
