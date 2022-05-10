@@ -23,5 +23,6 @@
         <page name='Useful'/>
         <page name='swap for increasing'/>
         <page name='dublicate elements'/>
+        <page name='inclusive subarray'/>
     </pages>
 </playground>
