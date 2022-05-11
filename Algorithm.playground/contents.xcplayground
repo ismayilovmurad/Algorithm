@@ -24,5 +24,6 @@
         <page name='swap for increasing'/>
         <page name='dublicate elements'/>
         <page name='inclusive subarray'/>
+        <page name='lexicographically smaller'/>
     </pages>
 </playground>
