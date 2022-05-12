@@ -2,7 +2,6 @@
 
 import Foundation
 
-// There's a string s
 // Take all the prefixes of the s
 // Choose the longest palindrome
 // Chosen palindrome (prefix) should be at least 2 characters

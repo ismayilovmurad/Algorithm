@@ -2,13 +2,12 @@
 
 import Foundation
 
-var a = [1, 2, 3]
-var b = [1, 2, 3]
-var k = 31
+let a = [1, 2, 3]
+let b = [1, 2, 3]
+let k = 31
 
 func solution(a: [Int], b: [Int], k: Int) -> Int {
     var tinyCounter = 0
-    
     // iterate through from 0 to the length of the a or b, they are the same length
     for i in 0..<a.count {
         // x = i-th item of the a, from the left
@@ -18,9 +17,7 @@ func solution(a: [Int], b: [Int], k: Int) -> Int {
         // concatenate xy
         let xy = Int(x + y)!
         // check if it's less than k
-        if xy < k {
-            tinyCounter += 1
-        }
+        if xy < k {tinyCounter += 1}
     }
     
     return tinyCounter
