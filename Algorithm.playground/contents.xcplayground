@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
     <pages>
+        <page name='8. sum of pairs divisible by k'/>
         <page name='7. inclusive subarray'/>
         <page name='6. contiguous k length subarrays'/>
         <page name='5. decreasing contiguous subarrays'/>
@@ -19,7 +20,6 @@
         <page name='one from front, one from back'/>
         <page name='one letter from each one'/>
         <page name='split into two unique'/>
-        <page name='sum of two divisible by k'/>
         <page name='super tower'/>
         <page name='swap for increasing'/>
         <page name='Useful'/>
