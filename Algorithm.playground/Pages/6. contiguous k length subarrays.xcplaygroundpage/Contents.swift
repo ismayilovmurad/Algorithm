@@ -2,37 +2,33 @@
 
 import Foundation
 
-// get contiguous subarrays of arr
-// only the k length ones
-// get the subarrays whose items' sum is s
-
-// [1], [1, 2], [1, 2, 4]
-// [2], [2, 4], [2, 4, -1]
-// [4], [4, -1], [4, -1, 6]
-// [-1], [-1, 6], [-1, 6, 1]
-// [6], [6, 1]
-// [1]
-
-// [2, 4], [-1, 6, 1], [6]
-
 var arr = [1, 2, 4, -1, 6, 1]
 var k = 3
 var s: Int64 = 6
 
 func solution (arr: [Int], k: Int, s: Int64) -> Int64 {
     var subarrays = [[Int]]()
-    
+    // iterate through from 0 to the length of the array
     for i in 0..<arr.count {
+        // if the i is less than the length of the array
+        // subtract k because it's not possible to iterate through to the i+k if it's not less than
         if i < arr.count-k {
+            // iterate through from the i to the i+k
             for j in i..<i+k {
+                // get that less than or equal to k length subarray
                 let subarray = Array(arr[i...j])
+                // add it if the subarray's items' sum is s
                 if findArrayItemSum(array: subarray) == s {
                     subarrays.append(subarray)
                 }
             }
         } else {
+            // iterate through from the i to the length of the array
+            // because i is more than the lenght of the array subtract k
             for j in i..<arr.count {
+                // get that less than or equal to k length subarray
                 let subarray = Array(arr[i...j])
+                // add it if the subarray's items' sum is s
                 if findArrayItemSum(array: subarray) == s {
                     subarrays.append(subarray)
                 }

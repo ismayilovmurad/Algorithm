@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
     <pages>
+        <page name='5. decreasing contiguous subarrays'/>
         <page name='4. left and right'/>
         <page name='3. contiguous subarrays'/>
         <page name='2. zigzag'/>
@@ -9,7 +10,6 @@
         <page name='arrange and equal'/>
         <page name='contiguous k length subarrays'/>
         <page name='cut the longest palindrome'/>
-        <page name='decreasing contiguous subarrays'/>
         <page name='difference between two arrays'/>
         <page name='digits, most number of times'/>
         <page name='dublicate elements'/>
