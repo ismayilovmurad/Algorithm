@@ -2,18 +2,16 @@
 
 import Foundation
 
-// Take all the prefixes of the s
-// Choose the longest palindrome
-// Chosen palindrome (prefix) should be at least 2 characters
-// Cut that palindrome (prefix) from the string
-// Then continue with the new string the same thing again starting with taking all the prefixes
-
 var s = "aaacodedoc"
 
 func solution(s: String) -> String {
     var result = s
-    
+    // loop while the longest palindrome prefix length is more than 2
     while (longestPalindrome(s: result).count >= 2) {
+        // the longest palindrome prefix from the aaacodedoc is aaa
+        // cut that palindrome prefix from the s
+        // the longest palindrome prefix from the codedoc is codedoc
+        // cut that palindrome prefix from the s
         result = String(result.dropFirst(longestPalindrome(s: result).count))
     }
     
@@ -22,17 +20,20 @@ func solution(s: String) -> String {
 
 func longestPalindrome(s: String) -> String {
     var result = ""
-    
+    // iterate through from the 0 to the length of the s
     for i in 0..<s.count {
+        // get the prefix starting from i+1
+        // because prefix method starts with 1
         let candidate = String(s.prefix(i+1))
+        // get the reversed version of the candidate
         let reversed = String(candidate.reversed())
-        
+        // check is it's a palindrome
         if candidate == reversed {
+            // check if it's the longest palindrome prefix
             if candidate.count > result.count {
                 result = candidate
             }
         }
-        
     }
     
     return result
