@@ -10,13 +10,10 @@ var pieces = [[5], [1, 2], [3]]
 
 func solution(arr: [Int], pieces: [[Int]]) -> Bool {
     var result = false
-    
+    // check if there's only one piece
     if pieces.count == 1 {
-        if pieces[0] == arr {
-            return true
-        } else {
-            
-        }
+        // check if that only piece is equal to the arr
+        if pieces[0] == arr { return true }
     } else {
         
         var array = [Int]()
@@ -24,6 +21,8 @@ func solution(arr: [Int], pieces: [[Int]]) -> Bool {
         for i in 0..<pieces.count {
             array.append(i)
         }
+        
+        print(array)
         
         for i in permute(array) {
             var a = [[Int]]()

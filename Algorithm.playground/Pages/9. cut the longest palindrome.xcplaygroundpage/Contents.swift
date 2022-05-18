@@ -27,7 +27,7 @@ func longestPalindrome(s: String) -> String {
         let candidate = String(s.prefix(i+1))
         // get the reversed version of the candidate
         let reversed = String(candidate.reversed())
-        // check is it's a palindrome
+        // check if it's a palindrome
         if candidate == reversed {
             // check if it's the longest palindrome prefix
             if candidate.count > result.count {
