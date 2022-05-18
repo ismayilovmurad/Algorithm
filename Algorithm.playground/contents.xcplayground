@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
     <pages>
+        <page name='11. is power of two'/>
         <page name='10. dublicate elements'/>
         <page name='9. cut the longest palindrome'/>
         <page name='8. sum of pairs divisible by k'/>
@@ -15,7 +16,6 @@
         <page name='arrange and equal'/>
         <page name='difference between two arrays'/>
         <page name='digits, most number of times'/>
-        <page name='is power of two'/>
         <page name='lexicographically smaller'/>
         <page name='one from front, one from back'/>
         <page name='one letter from each one'/>

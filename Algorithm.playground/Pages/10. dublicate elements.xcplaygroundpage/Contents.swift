@@ -2,9 +2,6 @@
 
 import Foundation
 
-// get contiguous subarrays
-// each element of subarray should appear at least twice
-
 var arr = [1, 2, 3, 3, 3, 2, 4, 1]
 
 func solution(arr: [Int]) -> Int {
