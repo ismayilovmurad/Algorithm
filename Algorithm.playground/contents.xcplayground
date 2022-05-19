@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
     <pages>
+        <page name='14. split into two unique'/>
+        <page name='13. swap for increasing'/>
         <page name='12. lexicographically smaller'/>
         <page name='11. is power of two'/>
         <page name='10. dublicate elements'/>
@@ -19,9 +21,7 @@
         <page name='digits, most number of times'/>
         <page name='one from front, one from back'/>
         <page name='one letter from each one'/>
-        <page name='split into two unique'/>
         <page name='super tower'/>
-        <page name='swap for increasing'/>
         <page name='Useful'/>
     </pages>
 </playground>
