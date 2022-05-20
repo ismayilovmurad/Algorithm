@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
     <pages>
+        <page name='16. one letter from each one'/>
         <page name='15. super tower'/>
         <page name='14. split into two unique'/>
         <page name='13. swap for increasing'/>
@@ -17,11 +18,10 @@
         <page name='2. zigzag'/>
         <page name='1. (i-1) + i + (i+1)'/>
         <page name='0. left to right, right to left'/>
-        <page name='arrange and equal'/>
+        <page name='17. arrange and equal'/>
         <page name='difference between two arrays'/>
         <page name='digits, most number of times'/>
         <page name='one from front, one from back'/>
-        <page name='one letter from each one'/>
         <page name='main'/>
     </pages>
 </playground>

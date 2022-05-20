@@ -6,7 +6,6 @@ import Foundation
 
 var arr = [1, 2, 5, 3]
 var pieces = [[5], [1, 2], [3]]
-// this should return true
 
 func solution(arr: [Int], pieces: [[Int]]) -> Bool {
     var result = false
@@ -21,10 +20,8 @@ func solution(arr: [Int], pieces: [[Int]]) -> Bool {
         for i in 0..<pieces.count {
             array.append(i)
         }
-        
-        print(array)
-        
-        for i in permute(array) {
+                
+        for i in permutations(array) {
             var a = [[Int]]()
             
             for j in i {
@@ -49,24 +46,23 @@ func solution(arr: [Int], pieces: [[Int]]) -> Bool {
     
     return result
 }
-
-var newArray = [[Int]]()
-
-func permute(_ str: [Int]) -> [[Int]] {
-        var nums = str
-        findPermutation(&nums, left: 0, right: str.count)
-        return newArray
-}
+// get all the permutations of any type of an array
+func permutations<T>(_ arr: [T]) -> [[T]] {
+    // return the array itself if it has less than 2 items
+    if arr.count < 2 { return [arr] }
     
-func findPermutation(_ num: inout [Int], left: Int, right: Int) {
-        if left == right {
-            newArray.append(num)
+    var result: [[T]] = []
+    // get the items as an array from the arr starting from the index 1
+    let rest = Array(arr[1...])
+    // iterate through the permutations of the gotten array
+    for p in permutations(rest) {
+        // iterate through from 0 to the end of the permutations array
+        for i in 0...p.count {
+            result.append(Array(p[0..<i]) + [arr[0]] + Array(p[i...]))
         }
-        for i in left ..< right {
-            num.swapAt(i, left)
-            findPermutation(&num, left: left+1, right: right)
-            num.swapAt(i, left)
-        }
+    }
+    
+    return result
 }
 
 print(solution(arr: arr, pieces: pieces))

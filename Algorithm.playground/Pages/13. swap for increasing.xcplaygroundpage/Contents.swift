@@ -83,4 +83,5 @@ func isSorted(is array: [Int]) -> Bool {
     return true
 }
 
-print(solution(numbers: numbers))
+//print(solution(numbers: numbers))
+print(permutations([1,2,3]))
