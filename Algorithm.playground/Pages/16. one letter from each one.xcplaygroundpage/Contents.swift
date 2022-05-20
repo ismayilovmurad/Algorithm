@@ -4,18 +4,19 @@ import Foundation
 
 var arr = ["Daisy", "Rose", "Hyacinth", "Poppy"]
 
-// The output should be "DRHPaoyoisapsecpyiynth"
-
 func solution(arr: [String]) -> String {
+    // get the each string as an array
     let lettersArrays = eachStringAsAnArray(array: arr)
+    // get the longest array in an array of arrays
     let longestArray = getLongestArray(array: lettersArrays)
     var result = ""
-    
+    // iterate through from 0 to the end of the longestArray
     for i in 0..<longestArray.count {
+        // iterate through from 0 to the end of the lettersArrays
         for j in 0..<lettersArrays.count {
             if i > lettersArrays[j].count-1 {
                 continue
-            }else {
+            } else {
                 result += lettersArrays[j][i]
             }
             
@@ -24,7 +25,7 @@ func solution(arr: [String]) -> String {
         
     return result
 }
-
+// get the each string as an array
 func eachStringAsAnArray(array: [String]) -> [[String]] {
     var lettersArrays = [[String]]()
     
@@ -38,7 +39,7 @@ func eachStringAsAnArray(array: [String]) -> [[String]] {
     
     return lettersArrays
 }
-
+// get the longest array in an array of arrays
 func getLongestArray(array: [[String]]) -> [String] {
     var longestArray = [String]()
     

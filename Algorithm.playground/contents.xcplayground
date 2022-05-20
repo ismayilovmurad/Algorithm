@@ -22,6 +22,6 @@
         <page name='digits, most number of times'/>
         <page name='one from front, one from back'/>
         <page name='one letter from each one'/>
-        <page name='Useful'/>
+        <page name='main'/>
     </pages>
 </playground>
