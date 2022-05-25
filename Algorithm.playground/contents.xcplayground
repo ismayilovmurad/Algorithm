@@ -22,6 +22,6 @@
         <page name='2. zigzag'/>
         <page name='1. (i-1) + i + (i+1)'/>
         <page name='0. left to right, right to left'/>
-        <page name='main'/>
+        <page name='Main'/>
     </pages>
 </playground>

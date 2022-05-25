@@ -21,7 +21,7 @@ func solution(arr: [Int]) -> Int {
     
     return result
 }
-
+// check if the each element of the subarray appears at least twice
 func atLeastTwo(array: [Int]) -> Bool {
     var result = true
     // check if the length of the subarray is more than 1

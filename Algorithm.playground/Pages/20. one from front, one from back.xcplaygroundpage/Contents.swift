@@ -2,41 +2,32 @@
 
 import Foundation
 
-// There's an integer array a
-// Generate a new array b from the array b
-// b[0] = a[0]
-// b[1] = the last element of the a
-// b[2] = a[1]
-// b[3] = the second-last element of the a
-// and so on
-// Determine if the b is sorted in ascending order or not
-
 var a = [1, 3, 5, 6, 4, 2]
 
 func solution(a: [Int]) -> Bool {
     var b = [Int]()
-    
-    if a.count == 1 {
-        return true
-    }
-    
+    // return true if the length is 1
+    if a.count == 1 { return true }
+    // iterate through from 0 to the half of the length
     for i in 0...(a.count-1) / 2 {
+        // take from the front
         b.append(a[i])
-        
+        // check to not add the middle number twice
         if i != a.count-(i+1) {
+            // take from the back
             b.append(a[a.count-(i+1)])
         }
     }
     
-    for i in 0...b.count-1 {
-        let first = i
-        let next = i+1
-        
-        if next < b.count {
-            if b[first] >= b[next] {
-                return false
-            }
-        }
+    return isSorted(is: b)
+}
+// check if the array is sorted
+func isSorted(is array: [Int]) -> Bool {
+    // iterate through from 0 to the end of the array
+    // subtract 1 because you'll get the i+1
+    for i in 0..<array.count-1 {
+        // check if the left number is greater than or equal to the right number
+        if array[i] >= array[i + 1] { return false }
     }
     
     return true

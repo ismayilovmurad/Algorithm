@@ -2,48 +2,73 @@
 
 import Foundation
 
-// There's an integer array
-// Determine the digits that occur the most number of times
-// Return the array in ascending order
-
 var a = [25, 2, 3, 57, 38, 41]
 
 func solution(a: [Int]) -> [Int] {
     var digitList = [Int]()
-    var dictionaryHelper = [Int]()
-    var dictionary = [Int: Int]()
-    
-    for i in 0...a.count-1 {
-        if a[i] > 9 || a[i] < -9 {
-            for i in String(a[i]) {
-                digitList.append(Int(String(i))!)
-            }
-        }else {
-            digitList.append(a[i])
+    // iterate through the a
+    for i in a {
+        // check if the number has more than 1 digits
+        if i > 9 {
+            // get that number
+            var theMoreThan1DigitNumber = i
+            // get the digits from the number and add those digits to the digitList
+            digitList += getDigits(number: &theMoreThan1DigitNumber)
+        } else {
+            // add the 1 digit number to the digitList
+            digitList.append(i)
         }
     }
-    
-    for i in digitList {
-        if(dictionaryHelper.contains(i)) {
-            dictionary[i] = dictionary[i]! + 1
-            dictionaryHelper.append(i)
-        }else {
-            dictionary[i] = 1
-            dictionaryHelper.append(i)
+    // get the number of occurences of every digit
+    let numberOfOccurences = countOccurencesOfEveryItem(array: digitList)
+            
+    var maxValues = [Int]()
+    // iterate through the digits from the dictionary
+    for i in numberOfOccurences.keys {
+        // check if the current value is equal to the max value in the dictionary
+        if numberOfOccurences[i] == Array(numberOfOccurences.values).max() {
+            // add it to the maxValues
+            maxValues.append(i)
         }
     }
         
-    var finalArray = [Int]()
+    return maxValues.sorted()
+}
+// get digits from a number
+func getDigits(number: inout Int) -> [Int] {
+    var array = [Int]()
+    // loop while the number is greater than 0
+    while number > 0 {
+        // add the remainder
+        array.append(number % 10)
+        number = number / 10
+    }
+    // reverse
+    array.reverse()
     
-    for i in dictionary.keys {
-        if dictionary[i] == Array(dictionary.values).max() {
-            finalArray.append(i)
+    return array
+}
+// get the number of occurences of every item
+func countOccurencesOfEveryItem(array: [Int]) -> [Int: Int] {
+    var dictionaryHelper = [Int]()
+    var dictionary = [Int: Int]()
+    // iterate through the array
+    for i in array {
+        // check if the second dictionary contains the current item
+        if(dictionaryHelper.contains(i)) {
+            // increment that key
+            dictionary[i] = dictionary[i]! + 1
+            // add it to the second dictionary
+            dictionaryHelper.append(i)
+        } else {
+            // add 1 to that key, because it appears first time
+            dictionary[i] = 1
+            // add it to the second dictionary
+            dictionaryHelper.append(i)
         }
     }
     
-    finalArray.sort()
-    
-    return finalArray
+    return dictionary
 }
 
 print(solution(a: a))

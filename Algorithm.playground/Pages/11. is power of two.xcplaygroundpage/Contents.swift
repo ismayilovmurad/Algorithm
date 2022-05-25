@@ -21,7 +21,7 @@ func solution(a: [Int]) -> Int {
     
     return result
 }
-
+// check if the number is power of 2
 func isPowerOfTwo(number: inout Int) -> Bool {
     // 2^0 is 1 and 2^1 is 2
     if number == 1 && number == 2 { return true }

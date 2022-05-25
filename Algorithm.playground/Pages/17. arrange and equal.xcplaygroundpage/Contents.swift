@@ -2,13 +2,10 @@
 
 import Foundation
 
-// return true if you can equalize the pieces with the arr by arranging
-
 var arr = [1, 2, 5, 3]
 var pieces = [[5], [1, 2], [3]]
 
 func solution(arr: [Int], pieces: [[Int]]) -> Bool {
-    var result = false
     // check if there's only one piece
     if pieces.count == 1 {
         // check if that only piece is equal to the arr
@@ -16,35 +13,36 @@ func solution(arr: [Int], pieces: [[Int]]) -> Bool {
     } else {
         
         var array = [Int]()
-        
+        // iterate through from 0 to the end of the pieces
         for i in 0..<pieces.count {
+            // add the counts of pieces to the array
             array.append(i)
         }
-                
+        // iterate through the permutations of the array
         for i in permutations(array) {
             var a = [[Int]]()
-            
+            // iterate through the permutations
             for j in i {
+                // add it to the a
                 a.append(pieces[j])
             }
             
             var b = [Int]()
-            
+            // iterate through the a
             for x in a {
+                // iterate through the x
                 for y in x {
+                    // add it to the b
                     b.append(y)
                 }
             }
-            
-            if b == arr {
-                result = true
-                break
-            }
+            // check if the b is equal to the arr after swaping the pieces
+            if b == arr { return true }
         }
         
     }
     
-    return result
+    return false
 }
 // get all the permutations of any type of an array
 func permutations<T>(_ arr: [T]) -> [[T]] {

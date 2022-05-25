@@ -16,7 +16,7 @@ func solution(arr: [Int]) -> Int64 {
             // get the subarray
             let subarray = Array(arr[i...j])
             // add the subarray to the subarrays if it's decreasing
-            if isDecreasing(array: subarray) {
+            if isSorted(is: subarray) {
                 subarrays.append(subarray)
             }
         }
@@ -24,14 +24,13 @@ func solution(arr: [Int]) -> Int64 {
     
     return Int64(subarrays.count)
 }
-
-func isDecreasing (array: [Int]) -> Bool {
-    if array.count == 1 { return true }
-    
+// check if the array is sorted
+func isSorted(is array: [Int]) -> Bool {
+    // iterate through from 0 to the end of the array
+    // subtract 1 because you'll get the i+1
     for i in 0..<array.count-1 {
-        if array[i] < array[i+1] {
-            return false
-        }
+        // check if the left number is greater than or equal to the right number
+        if array[i] <= array[i + 1] { return false }
     }
     
     return true
